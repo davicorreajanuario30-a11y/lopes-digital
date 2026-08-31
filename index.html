@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lopes Digital</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🚀 Lopes Digital</h1>
+    <p>Slides, produtos digitais e suporte</p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <h2>Transformamos suas ideias em apresentações incríveis</h2>
+
+      <p>
+        Peça seus slides, envie seus arquivos e acompanhe seu pedido.
+      </p>
+
+      <button onclick="mostrarMensagem()">
+        Criar meu pedido
+      </button>
+
+    </section>
+
+
+    <section class="servicos">
+
+      <div class="card">
+        <h2>🎨 Criação de Slides</h2>
+        <p>Apresentações profissionais para você.</p>
+      </div>
+
+      <div class="card">
+        <h2>📦 Produtos Digitais</h2>
+        <p>Produtos e serviços disponíveis online.</p>
+      </div>
+
+      <div class="card">
+        <h2>💬 Suporte</h2>
+        <p>Atendimento para nossos clientes.</p>
+      </div>
+
+    </section>
+
+
+    <section class="pedido">
+
+      <h2>📤 Envie seu pedido</h2>
+
+      <input
+        type="text"
+        id="nome"
+        placeholder="Seu nome"
+      >
+
+      <textarea
+        id="descricao"
+        placeholder="Descreva o slide que você precisa"
+      ></textarea>
+
+      <input
+        type="file"
+        id="arquivo"
+      >
+
+      <button onclick="enviarPedido()">
+        Enviar pedido
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>© 2026 Lopes Digital</p>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
