@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chat Global Premium | Lopes Digital</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .premium-container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .premium-card {
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 20px;
+      background: #1e293b;
+    }
+
+    .preco {
+      font-size: 38px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .desconto {
+      padding: 15px;
+      border-radius: 12px;
+      background: #14532d;
+      margin: 20px 0;
+    }
+
+    .bloqueado {
+      padding: 15px;
+      border-radius: 12px;
+      background: #7f1d1d;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      margin: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="premium-container">
+
+    <h1>🌎 Chat Global Premium</h1>
+
+    <p>
+      Converse com a comunidade da Lopes Digital.
+    </p>
+
+
+    <section class="premium-card">
+
+      <h2>⭐ Acesso Premium</h2>
+
+      <div id="areaPreco">
+
+        <div class="preco">
+          R$ 50
+        </div>
+
+        <p>
+          Acesso ao Chat Global Premium.
+        </p>
+
+      </div>
+
+
+      <div class="desconto">
+
+        🎉 Já fez um trabalho com a Lopes Digital?
+
+        <br><br>
+
+        Clientes com trabalho concluído podem receber
+        o valor especial de:
+
+        <h2>R$ 25</h2>
+
+      </div>
+
+
+      <button onclick="solicitarAcesso()">
+        💳 Solicitar acesso
+      </button>
+
+      <button onclick="voltar()">
+        🏠 Voltar
+      </button>
+
+    </section>
+
+
+    <div class="bloqueado">
+
+      🔒 O acesso ao Chat Global só será liberado
+      depois da confirmação do pagamento.
+
+    </div>
+
+  </main>
+
+
+<script>
+
+function solicitarAcesso() {
+
+  alert(
+    "Seu pedido de acesso foi iniciado. O valor final será confirmado de acordo com o histórico da sua conta."
+  );
+
+}
+
+function voltar() {
+
+  window.location.href = "comunidade.html";
+
+}
+
+</script>
+
+</body>
+</html>
