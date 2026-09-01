@@ -11,70 +11,143 @@
 
 <body>
 
+  <!-- CABEÇALHO -->
   <header>
     <h1>🚀 Lopes Digital</h1>
-    <p>Slides, produtos digitais e suporte</p>
+    <p>Slides, produtos digitais e serviços online</p>
   </header>
 
+
+  <!-- ÁREA INICIAL -->
   <main>
 
-    <section class="hero">
+    <section id="inicio">
 
-      <h2>Transformamos suas ideias em apresentações incríveis</h2>
+      <h2>Bem-vindo à Lopes Digital 👋</h2>
 
       <p>
-        Peça seus slides, envie seus arquivos e acompanhe seu pedido.
+        Crie pedidos, acompanhe seus serviços e conheça nossos produtos.
       </p>
 
-      <button onclick="mostrarMensagem()">
-        Criar meu pedido
+      <button onclick="mostrarLogin()">
+        🔐 Entrar
+      </button>
+
+      <button onclick="mostrarCadastro()">
+        👤 Criar conta
       </button>
 
     </section>
 
 
-    <section class="servicos">
+    <!-- LOGIN -->
 
-      <div class="card">
-        <h2>🎨 Criação de Slides</h2>
-        <p>Apresentações profissionais para você.</p>
-      </div>
+    <section id="login" class="pagina escondido">
 
-      <div class="card">
-        <h2>📦 Produtos Digitais</h2>
-        <p>Produtos e serviços disponíveis online.</p>
-      </div>
+      <h2>🔐 Entrar</h2>
 
-      <div class="card">
-        <h2>💬 Suporte</h2>
-        <p>Atendimento para nossos clientes.</p>
-      </div>
+      <input
+        type="email"
+        id="emailLogin"
+        placeholder="Seu e-mail"
+      >
+
+      <input
+        type="password"
+        id="senhaLogin"
+        placeholder="Sua senha"
+      >
+
+      <button onclick="entrar()">
+        Entrar
+      </button>
+
+      <button onclick="voltarInicio()">
+        ← Voltar
+      </button>
 
     </section>
 
 
-    <section class="pedido">
+    <!-- CADASTRO -->
 
-      <h2>📤 Envie seu pedido</h2>
+    <section id="cadastro" class="pagina escondido">
+
+      <h2>👤 Criar conta</h2>
 
       <input
         type="text"
-        id="nome"
+        id="nomeCadastro"
         placeholder="Seu nome"
+      >
+
+      <input
+        type="email"
+        id="emailCadastro"
+        placeholder="Seu e-mail"
+      >
+
+      <input
+        type="password"
+        id="senhaCadastro"
+        placeholder="Crie uma senha"
+      >
+
+      <button onclick="cadastrar()">
+        Criar conta
+      </button>
+
+      <button onclick="voltarInicio()">
+        ← Voltar
+      </button>
+
+    </section>
+
+
+    <!-- PAINEL -->
+
+    <section id="painel" class="pagina escondido">
+
+      <h2>
+        👋 Olá, <span id="nomeUsuario"></span>
+      </h2>
+
+      <p>Escolha o que deseja fazer:</p>
+
+      <button onclick="mostrarPedido()">
+        📦 Fazer pedido
+      </button>
+
+      <button onclick="sair()">
+        🚪 Sair
+      </button>
+
+    </section>
+
+
+    <!-- PEDIDO -->
+
+    <section id="pedido" class="pagina escondido">
+
+      <h2>📦 Novo Pedido</h2>
+
+      <input
+        type="text"
+        id="tema"
+        placeholder="Tema do seu slide"
       >
 
       <textarea
         id="descricao"
-        placeholder="Descreva o slide que você precisa"
+        placeholder="Descreva seu pedido"
       ></textarea>
 
-      <input
-        type="file"
-        id="arquivo"
-      >
-
       <button onclick="enviarPedido()">
-        Enviar pedido
+        🚀 Enviar Pedido
+      </button>
+
+      <button onclick="mostrarPainel()">
+        ← Voltar
       </button>
 
     </section>
@@ -83,13 +156,12 @@
 
 
   <footer>
-
     <p>© 2026 Lopes Digital</p>
-
   </footer>
 
 
-  <sc<script type="module" src="./app.js"></script>
-<script src="./app.js"></script>
+  <!-- IMPORTANTE: CARREGA O JAVASCRIPT -->
+  <script src="app.js"></script>
+
 </body>
-</html>
+        </html>
