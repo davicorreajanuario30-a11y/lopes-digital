@@ -1,29 +1,80 @@
-function mostrarMensagem() {
-  alert("Olá! 👋 Bem-vindo à Lopes Digital!");
-}
+import { database } from "./firebase-config.js";
 
-function enviarPedido() {
-  const nome = document.getElementById("nome").value;
-  const descricao = document.getElementById("descricao").value;
-  const arquivo = document.getElementById("arquivo").files[0];
+import {
+  ref,
+  push,
+  set
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-database.js";
+
+
+window.mostrarMensagem = function () {
+  alert("Olá! 👋 Bem-vindo à Lopes Digital!");
+};
+
+
+window.enviarPedido = async function () {
+
+  const nome =
+    document.getElementById("nome").value.trim();
+
+  const descricao =
+    document.getElementById("descricao").value.trim();
+
 
   if (!nome || !descricao) {
-    alert("Preencha seu nome e descreva o pedido.");
+
+    alert(
+      "Preencha seu nome e descreva o pedido."
+    );
+
     return;
+
   }
 
-  let mensagem = "Pedido enviado com sucesso! 🚀\n\n";
-  
-  mensagem += "Cliente: " + nome + "\n";
-  mensagem += "Pedido: " + descricao + "\n";
 
-  if (arquivo) {
-    mensagem += "Arquivo selecionado: " + arquivo.name;
+  try {
+
+    const pedidosRef =
+      ref(database, "pedidos");
+
+
+    const novoPedido =
+      push(pedidosRef);
+
+
+    await set(novoPedido, {
+
+      nome: nome,
+
+      descricao: descricao,
+
+      status: "novo",
+
+      data: new Date().toISOString()
+
+    });
+
+
+    alert(
+      "✅ Pedido enviado com sucesso!"
+    );
+
+
+    document.getElementById("nome").value = "";
+
+    document.getElementById("descricao").value = "";
+
+    document.getElementById("arquivo").value = "";
+
+
+  } catch (erro) {
+
+    console.error(erro);
+
+    alert(
+      "❌ Erro ao enviar o pedido."
+    );
+
   }
 
-  alert(mensagem);
-
-  document.getElementById("nome").value = "";
-  document.getElementById("descricao").value = "";
-  document.getElementById("arquivo").value = "";
-}
+};
