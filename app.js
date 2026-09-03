@@ -78,3 +78,29 @@ window.enviarPedido = async function () {
   }
 
 };
+window.mostrarPagina = function (paginaId) {
+
+  // Esconde todas as páginas
+  document.querySelectorAll("main section").forEach(function (pagina) {
+    pagina.classList.add("escondido");
+  });
+
+  // Mostra a página escolhida
+  const pagina = document.getElementById(paginaId);
+
+  if (pagina) {
+    pagina.classList.remove("escondido");
+  } else {
+    console.error("Página não encontrada:", paginaId);
+  }
+};
+
+
+window.mostrarLogin = function () {
+  mostrarPagina("login");
+};
+
+
+window.voltarInicio = function () {
+  mostrarPagina("inicio");
+};
