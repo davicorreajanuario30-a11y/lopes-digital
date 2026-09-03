@@ -104,3 +104,6 @@ window.mostrarLogin = function () {
 window.voltarInicio = function () {
   mostrarPagina("inicio");
 };
+window.mostrarCadastro = function () {
+  mostrarPagina("cadastro");
+};
